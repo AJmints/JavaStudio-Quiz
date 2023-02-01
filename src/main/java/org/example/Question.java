@@ -19,6 +19,10 @@ public abstract class Question {
         count++;
         return count;
     }
+
+    public int ompf() {
+        return count = 0;
+    }
     public String getQuestion() {
         return question + "\n";
     }

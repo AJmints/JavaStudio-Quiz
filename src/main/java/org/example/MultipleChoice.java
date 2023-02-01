@@ -76,7 +76,7 @@ public class MultipleChoice extends Question{
             choice4 = key;
         }
 
-        System.out.println(this.getQuestion() + "1: " + choice1 + "\n2: " + choice2 + "\n3: " + choice3 + "\n4: " + choice4 + "\n");
+        System.out.println("\n" + this.getQuestion() + "1: " + choice1 + "\n2: " + choice2 + "\n3: " + choice3 + "\n4: " + choice4 + "\n");
     }
 
     public boolean calculateAnswer(int num) {

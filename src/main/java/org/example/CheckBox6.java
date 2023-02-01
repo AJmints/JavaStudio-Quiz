@@ -6,6 +6,7 @@ import java.util.Map;
 
 public class CheckBox6 extends Question {
 
+    //Thinking about making a new CheckBox4 Class that offers 4 answer. Need to figure out how to shuffle answer options.
     private HashMap<String, Integer> answer1;
     private HashMap<String, Integer> answer2;
     private HashMap<String, Integer> answer3;
@@ -13,6 +14,16 @@ public class CheckBox6 extends Question {
     private HashMap<String, Integer> answer5;
     private HashMap<String, Integer> answer6;
     public int id = bump();
+
+    public CheckBox6(String aQuestion, double aPointValue, HashMap<String, Integer> answer1, HashMap<String, Integer> answer2, HashMap<String, Integer> answer3, HashMap<String, Integer> answer4, HashMap<String, Integer> answer5, HashMap<String, Integer> answer6) {
+        super(aQuestion, aPointValue);
+        this.answer1 = answer1;
+        this.answer2 = answer2;
+        this.answer3 = answer3;
+        this.answer4 = answer4;
+        this.answer5 = answer5;
+        this.answer6 = answer6;
+    }
 
     public CheckBox6(String aQuestion, double aPointValue) {
         super(aQuestion, aPointValue);
@@ -113,10 +124,13 @@ public class CheckBox6 extends Question {
         }
 
 
-        System.out.println(this.getQuestion() + "1: " + choice1 + "\n2: " + choice2 + "\n3: " + choice3 + "\n4: " + choice4 + "\n5: " + choice5 + "\n6: " + choice6 + "\n");
+        System.out.println("\n" + this.getQuestion() + "1: " + choice1 + "\n2: " + choice2 + "\n3: " + choice3 + "\n4: " + choice4 + "\n5: " + choice5 + "\n6: " + choice6 + "\n\nPlease select 3 answers, enter 0 if there are no more correct answers.\n(Select 1 option, hit enter, repeat.\n");
     }
 
     public double returnScore(Integer num) {
+        if (num > 3) {
+            return .22 * num;
+        }
         if (num == 3) {
             return 1;
         }

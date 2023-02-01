@@ -1,6 +1,5 @@
 package org.example;
 
-import java.util.HashMap;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -25,13 +24,13 @@ public class QuizRunner {
 
             if (Objects.equals(user, "1")) {
                 if (Quiz.theTest.size() > 2) {
-                    System.out.println("\nChoose the correct answer by entering 1-4\n");
+                    System.out.println("\nChoose the correct answer by typing the number that matches the correct answer(s)\n");
                     Quiz.getTestQuestion();
                     System.out.println("Your score was " + Quiz.getScore() + " out of " + Quiz.theTest.size() + " possible points.");
                     Quiz.resetQuiz();
                 } else {
                     Quiz.generateTest();
-                    System.out.println("\nChoose the correct answer by entering 1-4\n");
+                    System.out.println("\nChoose the correct answer by typing the number that matches the correct answer(s)\n");
                     Quiz.getTestQuestion();
                     System.out.println("Your score was " + Quiz.getScore() + " out of " + Quiz.theTest.size() + " possible points.");
                     Quiz.resetQuiz();
@@ -39,7 +38,8 @@ public class QuizRunner {
             }
 
             if (Objects.equals(user, "2")) {
-                System.out.println("Under construction. Pending...");
+                Quiz.writeUserTest();
+
             }
 
             if (Objects.equals(user, "3")) {

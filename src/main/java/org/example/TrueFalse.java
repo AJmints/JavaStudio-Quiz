@@ -66,6 +66,6 @@ public class TrueFalse extends Question{
             choice2 = key;
         }
 
-        System.out.println(this.getQuestion() + "1: " + choice1 + "\n2: " + choice2 + "\n");
+        System.out.println("\n" + this.getQuestion() + "1: " + choice1 + "\n2: " + choice2 + "\n");
     }
 }

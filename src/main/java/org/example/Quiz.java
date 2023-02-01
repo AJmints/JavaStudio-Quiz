@@ -1,20 +1,18 @@
 package org.example;
 
-import org.w3c.dom.ls.LSOutput;
-
-import java.lang.reflect.Array;
 import java.util.*;
 
 
 public class Quiz {
 
+    /**Currently working on the user making their own test. Note for tomorrow, Fix the numbering issue. Each HashMap should have the proper number reflected on it. **/
     public static ArrayList<Question> theTest = new ArrayList<>();
     public static ArrayList<Question> userMadeTest = new ArrayList<>();
     public static Scanner input = new Scanner(System.in);
     private static double score;
 
 
-    public static void generateTest() { //Make clean interface for user.
+    public static void generateTest() {
 
         MultipleChoice test = new MultipleChoice("What kind of organism is a tardigrade?", 1);
         MultipleChoice test2 = new MultipleChoice("What is 4 + 4?", 1);
@@ -116,6 +114,210 @@ public class Quiz {
 
     }
 
+    public static void writeUserTest() {
+        Scanner input = new Scanner(System.in);
+
+        //write new test in future with variable answers and questions that can be displayed shuffled/randomized
+        System.out.println("\nWhat test would you like like to write?\n1 - A check box style test with a total of 6 answers provided. 3 are correct and 3 are wrong.\n2 - A True or False test.\n3 - A multiple choice style test with 4 possible answers. Only 1 can be right.");
+
+
+        while (!input.hasNextInt()) {
+            System.out.println("Please enter a number between 1-3");
+            input.nextLine();
+        }
+        String answer = input.nextLine();
+        if (Objects.equals(answer, "1")) {
+
+            String cbQuestion = "";
+            double cbPointValue = 1;
+            HashMap<String, Integer> answer1 = new HashMap<>();
+            HashMap<String, Integer> answer2 = new HashMap<>();
+            HashMap<String, Integer> answer3 = new HashMap<>();
+            HashMap<String, Integer> answer4 = new HashMap<>();
+            HashMap<String, Integer> answer5 = new HashMap<>();
+            HashMap<String, Integer> answer6 = new HashMap<>();
+            String aStr1;
+            Integer zInt1;
+            Integer aInt1 = 0;
+            String zStr1 = "false";
+            String bStr1;
+
+            System.out.println("Please enter a question:\n");
+            cbQuestion = input.nextLine();
+
+            int j = 1;
+            for (int i = 0; i < 6; i++) {
+
+                System.out.println("Your question is:\n" + cbQuestion.toUpperCase());
+
+                System.out.println("\nPlease enter an answer to the question.\n");
+                aStr1 = input.nextLine();
+
+                System.out.println("\nIs this answer true or false?\n1 - true\n2 - false\n");
+                bStr1 = input.nextLine();
+                if (Objects.equals(bStr1, "1")) {
+                    zStr1 = "true";
+                }
+
+                System.out.println("\nAre you sure this information is accurate?\n\nQuestion: " + cbQuestion.toUpperCase() + "?\nAnswer: '" + aStr1.toUpperCase()+ "'\nThis answer is " + zStr1.toUpperCase() + "\n\nEnter 1 for yes or 2 for no. If you select no, a void entry will be filled the question slot.");
+
+                while (!input.hasNextInt()) {
+                    System.out.println("Please enter 1 or 2");
+                    input.nextLine();
+                }
+                bStr1 = input.nextLine();
+
+
+                int lightSwitch;
+                if (!zStr1.contains("true")) { // this line isn't working right.
+                    lightSwitch = 0;
+                } else {
+                    lightSwitch = j;
+                }
+
+                zStr1 = "false";
+
+
+                if (i == 0) {
+                    if (Objects.equals(bStr1, "1")) {
+                        answer1.put(aStr1, lightSwitch);
+                        System.out.println(answer1.entrySet());
+                        j++;
+                    } else if (Objects.equals(bStr1, "2")) {
+                        answer1.put("void", 0);
+                        System.out.println(answer1.entrySet());
+                        System.out.println("Void entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
+                        bStr1 = input.nextLine();
+                        if (Objects.equals(bStr1, "1")) {
+                            break;
+                        }
+                        j++;
+                    } else {
+                        answer1.put("void", 0);
+                        System.out.println(answer1.entrySet());
+                        System.out.println("Void entry added\n");
+                        j++;
+                    }
+                }
+                if (i == 1) {
+                    if (Objects.equals(bStr1, "1")) {
+                        answer2.put(aStr1, j);
+                        System.out.println(answer2.entrySet());
+                        j++;
+                    } else if (Objects.equals(bStr1, "2")) {
+                        answer2.put("void", 0);
+                        System.out.println(answer2.entrySet());
+                        System.out.println("Void entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
+                        bStr1 = input.nextLine();
+                        if (Objects.equals(bStr1, "1")) {
+                            break;
+                        }
+                        j++;
+                    } else {
+                        answer2.put("void", 0);
+                        System.out.println(answer2.entrySet());
+                        System.out.println("Void entry added\n");
+                        j++;
+                    }
+                }
+            if (i == 2) {
+                if (Objects.equals(bStr1, "1")) {
+                    answer3.put(aStr1, j);
+                    System.out.println(answer3.entrySet());
+                    j++;
+                } else if (Objects.equals(bStr1, "2")) {
+                    answer3.put("void", 0);
+                    System.out.println(answer3.entrySet());
+                    System.out.println("Void entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
+                    bStr1 = input.nextLine();
+                    if (Objects.equals(bStr1, "1")) {
+                        break;
+                    }
+                    j++;
+                } else {
+                    answer3.put("void", 0);
+                    System.out.println(answer3.entrySet());
+                    System.out.println("Void entry added\n");
+                    j++;
+                }
+            }
+                if (i == 3) {
+                    if (Objects.equals(bStr1, "1")) {
+                        answer4.put(aStr1, j);
+                        System.out.println(answer4.entrySet());
+                        j++;
+                    } else if (Objects.equals(bStr1, "2")) {
+                        answer4.put("void", 0);
+                        System.out.println(answer4.entrySet());
+                        System.out.println("Void entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
+                        bStr1 = input.nextLine();
+                        if (Objects.equals(bStr1, "1")) {
+                            break;
+                        }
+                        j++;
+                    } else {
+                        answer4.put("void", 0);
+                        System.out.println(answer4.entrySet());
+                        System.out.println("Void entry added\n");
+                        j++;
+                    }
+                }
+                if (i == 4) {
+                    if (Objects.equals(bStr1, "1")) {
+                        answer5.put(aStr1, j);
+                        System.out.println(answer5.entrySet());
+                        j++;
+                    } else if (Objects.equals(bStr1, "2")) {
+                        answer5.put("void", 0);
+                        System.out.println(answer5.entrySet());
+                        System.out.println("Void entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
+                        bStr1 = input.nextLine();
+                        if (Objects.equals(bStr1, "1")) {
+                            break;
+                        }
+                        j++;
+                    } else {
+                        answer5.put("void", 0);
+                        System.out.println(answer5.entrySet());
+                        System.out.println("Void entry added\n");
+                        j++;
+                    }
+                }
+                if (i == 5) {
+                    if (Objects.equals(bStr1, "1")) {
+                        answer6.put(aStr1, j);
+                        System.out.println(answer6.entrySet());
+                        j++;
+                    } else if (Objects.equals(bStr1, "2")) {
+                        answer6.put("void", 0);
+                        System.out.println(answer6.entrySet());
+                        System.out.println("Void entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
+                        bStr1 = input.nextLine();
+                        if (Objects.equals(bStr1, "1")) {
+                            break;
+                        }
+                        j++;
+                    } else {
+                        answer6.put("void", 0);
+                        System.out.println(answer6.entrySet());
+                        System.out.println("Void entry added\n");
+                        j++;
+                    }
+                }
+
+            }
+
+            CheckBox6 userQuestion = new CheckBox6(cbQuestion, cbPointValue, answer1, answer2, answer3, answer4, answer5, answer6);
+            Quiz.userMadeTest.add(userQuestion);
+            userQuestion.getQuestionKeysCheckBox6();
+
+        }
+
+
+
+
+    }
+
     public static double getScore() {
         return score;
     }
@@ -139,7 +341,6 @@ public class Quiz {
             for (Question obj : theTest) {
                 if (obj instanceof MultipleChoice) {
                     if (((MultipleChoice) obj).id == integer) {
-                        System.out.println("Question id: " + ((MultipleChoice) obj).id); // For testing purpose
                         ((MultipleChoice) obj).getQuestionKeysMultipleChoice();
                         int answer = input.nextInt();
                         if (obj.calculateAnswer(answer)) {
@@ -149,7 +350,6 @@ public class Quiz {
                 }
                     if (obj instanceof TrueFalse) {
                         if (((TrueFalse) obj).id == integer) {
-                            System.out.println("Question id: " + ((TrueFalse) obj).id);
                             ((TrueFalse) obj).getQuestionKeysTrueFalse();
                             int answer = input.nextInt();
                             if (obj.calculateAnswer(answer)) {
@@ -159,9 +359,7 @@ public class Quiz {
                     }
                  if (obj instanceof CheckBox6) {
                      if (((CheckBox6) obj).id == integer) {
-                         System.out.println("Question id: " + ((CheckBox6) obj).id);
                          ((CheckBox6) obj).getQuestionKeysCheckBox6();
-                         System.out.println("Please select 3 answers, enter 0 if you don't think there are 3 correct answers.");
 
                          while (!input.hasNextInt()) {
                              System.out.println("Please enter a number between 1-6");
@@ -202,8 +400,7 @@ public class Quiz {
 
                         checkBoxAnswers.clear();
                         duplicateSearch.clear();
-                        double add = ((CheckBox6) obj).returnScore(checkBoxCount);
-                        score = score + add;
+                        score = score + ((CheckBox6) obj).returnScore(checkBoxCount);
                         checkBoxCount = 0;
 
                      }
