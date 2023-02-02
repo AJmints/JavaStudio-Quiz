@@ -129,7 +129,7 @@ public class CheckBox6 extends Question {
         }
 
 
-        System.out.println("\n" + this.getQuestion() + "1: " + choice1 + "\n2: " + choice2 + "\n3: " + choice3 + "\n4: " + choice4 + "\n5: " + choice5 + "\n6: " + choice6 + "\n\nPlease select 3 answers, enter 0 if there are no more correct answers.\n(Select and type 1 answer, hit enter, repeat.)\n");
+        System.out.println("\n" + this.getQuestion() + "1: " + choice1 + "\n2: " + choice2 + "\n3: " + choice3 + "\n4: " + choice4 + "\n5: " + choice5 + "\n6: " + choice6 + "\n\nPlease select 3 answers, enter 0 if there are no more correct answers.\n(Select and type your answer, hit enter, repeat.)\n");
 
     }
 

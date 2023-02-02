@@ -848,15 +848,15 @@ public class Quiz {
             for (Question item : userMadeTest) {
                 if (item instanceof CheckBox6) {
                     if (((CheckBox6) item).id == choice) {
-                        System.out.println("You choose " + choice + " which will remove 'ID: " + ((CheckBox6) item).id + " - " + ((CheckBox6) item).getQuestion() + "'.\nIs this correct?\n1 - yes\n2 - no");
+                        System.out.println("You choose " + choice + " which will remove 'ID: " + ((CheckBox6) item).id + " - " + ((CheckBox6) item).getQuestion() + "\nIs this correct?\n1 - yes\n2 - no");
                     }
                 } else if (item instanceof MultipleChoice) {
                     if (((MultipleChoice) item).id == choice) {
-                        System.out.println("You choose " + choice + " which will remove 'ID: " + ((MultipleChoice) item).id + " - " + ((MultipleChoice) item).getQuestion() + "'.\nIs this correct?\n1 - yes\n2 - no");
+                        System.out.println("You choose " + choice + " which will remove 'ID: " + ((MultipleChoice) item).id + " - " + ((MultipleChoice) item).getQuestion() + "\nIs this correct?\n1 - yes\n2 - no");
                     }
                 } else if (item instanceof TrueFalse) {
                     if (((TrueFalse) item).id == choice) {
-                        System.out.println("You choose " + choice + " which will remove 'ID: " + ((TrueFalse) item).id + " - " + ((TrueFalse) item).getQuestion() + "'.\nIs this correct?\n1 - yes\n2 - no");
+                        System.out.println("You choose " + choice + " which will remove 'ID: " + ((TrueFalse) item).id + " - " + ((TrueFalse) item).getQuestion() + "\nIs this correct?\n1 - yes\n2 - no");
                     }
                 }
             }
@@ -879,18 +879,21 @@ public class Quiz {
                     if (item instanceof CheckBox6) {
                         if (((CheckBox6) item).id == remove) {
                             userMadeTest.remove(item);
+                            System.out.println("\nItem removed, sending you back to the main menu.\n");
                             cont = false;
                             return;
                         }
                     } else if (item instanceof MultipleChoice) {
                         if (((MultipleChoice) item).id == remove) {
                             userMadeTest.remove(item);
+                            System.out.println("\nItem removed, sending you back to the main menu.\n");
                             cont = false;
                             return;
                         }
                     } else if (item instanceof TrueFalse) {
                         if (((TrueFalse) item).id == remove) {
                             userMadeTest.remove(item);
+                            System.out.println("\nItem removed, sending you back to the main menu.\n");
                             cont = false;
                             return;
                         }

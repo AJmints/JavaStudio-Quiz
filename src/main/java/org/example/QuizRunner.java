@@ -11,7 +11,7 @@ public class QuizRunner {
 
         while (1==1) {
 
-            System.out.println("\nPlease select what you would like to do.\n1 - Generate and take premade test.\n2 - Create your own test questions.\n3 - Remove question from your test.\n4 - Take the test you made.\n5 - View the current questions in your test.\n6 - Finish\n");
+            System.out.println("\n**************************************\n\nPlease select what you would like to do.\n1 - Generate and take premade test.\n2 - Create your own test questions.\n3 - Remove question from your test.\n4 - Take the test you made.\n5 - View the current questions in your test.\n6 - Finish\n\n**************************************\n");
 
             while (!input.hasNextInt()) {
                 System.out.println("\nPlease enter a number 1-6\n");
@@ -39,6 +39,8 @@ public class QuizRunner {
             }
 
             if (Objects.equals(user, "3")) {
+                /** Uncomment to interact with a premade test **/
+//                Quiz.generateFalseUserTest();
                 Quiz.removeTestQuestions();
             }
 
