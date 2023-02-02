@@ -868,12 +868,6 @@ public class Quiz {
             }
             choice = input.nextInt();
 
-
-            /** need to find way to remove item from array, current code below doesn't work. **/
-            /** need to find way to remove item from array, current code below doesn't work. **/
-            /** need to find way to remove item from array, current code below doesn't work. **/
-
-
             if (choice == 1) {
                 for (Question item : userMadeTest) {
                     if (item instanceof CheckBox6) {
