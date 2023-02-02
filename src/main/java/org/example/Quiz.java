@@ -796,6 +796,11 @@ public class Quiz {
 
     public static void viewUserTestQuestions() {
 
+        if (userMadeTest.size() == 0) {
+            System.out.println("\n.\n.\nThe test is empty, please create test questions to remove.\n.\n.\nSending you back to the main menu.\n.\n.");
+            return;
+        }
+
             for (Question obj : userMadeTest) {
                 if (obj instanceof MultipleChoice) {
                         System.out.println("\nId: " + ((MultipleChoice) obj).id);
@@ -815,7 +820,7 @@ public class Quiz {
     public static void removeTestQuestions() {
 
         if (userMadeTest.size() == 0) {
-            System.out.println(".\n.\n.\nThe test is empty, please create test questions to remove.\n.\n.\nSending you back to the main menu.\n.\n.");
+            System.out.println("\n.\n.\nThe test is empty, please create test questions to remove.\n.\n.\nSending you back to the main menu.\n.\n.");
             return;
         }
         Scanner input = new Scanner(System.in);

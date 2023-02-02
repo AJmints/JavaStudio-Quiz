@@ -39,9 +39,31 @@ public class QuizRunner {
             }
 
             if (Objects.equals(user, "3")) {
-                /** Uncomment to interact with a premade test **/
-//                Quiz.generateFalseUserTest();
-                Quiz.removeTestQuestions();
+                boolean b = true;
+
+                do {
+                    System.out.println("\nWould you like to generate a premade test to use?\n1 - yes\n2 - no\n3 - main menu");
+                    while (!input.hasNextInt()) {
+                        System.out.println("\nPlease enter 1 or 2.\n");
+                        input.nextLine();
+                    }
+                    String a = input.nextLine();
+                    if (Objects.equals(a, "1")) {
+                        Quiz.generateFalseUserTest();
+                        Quiz.removeTestQuestions();
+                        b = false;
+                    } else if ((Objects.equals(a, "2"))) {
+                        Quiz.removeTestQuestions();
+                        b = false;
+                    } else if ((Objects.equals(a, "3"))) {
+                        System.out.println("\nReturning to main menu.\n");
+                        b = false;
+                    } else {
+                        System.out.println("\n.\nPlease enter a valid input.\n.\n");
+                    }
+
+                } while (b);
+
             }
 
             if (Objects.equals(user, "4")) {
@@ -51,9 +73,30 @@ public class QuizRunner {
             }
 
             if (Objects.equals(user, "5")) {
-                /** Uncomment to interact with a premade test **/
-//                Quiz.generateFalseUserTest();
-                Quiz.viewUserTestQuestions();
+                boolean b = true;
+
+                do {
+                    System.out.println("\nWould you like to generate a premade test to use?\n1 - yes\n2 - no\n3 - main menu");
+                    while (!input.hasNextInt()) {
+                        System.out.println("\nPlease enter 1 or 2.\n");
+                        input.nextLine();
+                    }
+                    String a = input.nextLine();
+                    if (Objects.equals(a, "1")) {
+                        Quiz.generateFalseUserTest();
+                        Quiz.viewUserTestQuestions();
+                        b = false;
+                    } else if ((Objects.equals(a, "2"))) {
+                        Quiz.viewUserTestQuestions();
+                        b = false;
+                    } else if ((Objects.equals(a, "3"))) {
+                        System.out.println("\nReturning to main menu.\n");
+                        b = false;
+                    } else {
+                        System.out.println("\n.\nPlease enter a valid input.\n.\n");
+                    }
+
+                } while (b);
             }
 
             if (Objects.equals(user, "6")) {
@@ -63,6 +106,7 @@ public class QuizRunner {
 
             if (Objects.equals(user, "404")) {
                 System.out.println("Logic not found");
+                ExperimentCode.playground1();
             }
 
 
