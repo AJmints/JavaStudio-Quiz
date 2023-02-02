@@ -10,12 +10,15 @@ public abstract class Question {
     private static int count = 0;
 
 
+    public Question() {
+    }
+
     public Question (String aQuestion, double aPointValue) {
         this.question = aQuestion;
         this.pointValue = aPointValue;
     }
 
-    public int bump() {
+    public static int bump() {
         count++;
         return count;
     }

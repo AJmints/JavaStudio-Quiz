@@ -15,6 +15,12 @@ public class CheckBox6 extends Question {
     private HashMap<String, Integer> answer6;
     public int id = bump();
 
+
+
+    public CheckBox6() {
+        super("",0);
+    }
+
     public CheckBox6(String aQuestion, double aPointValue, HashMap<String, Integer> answer1, HashMap<String, Integer> answer2, HashMap<String, Integer> answer3, HashMap<String, Integer> answer4, HashMap<String, Integer> answer5, HashMap<String, Integer> answer6) {
         super(aQuestion, aPointValue);
         this.answer1 = answer1;
@@ -125,6 +131,7 @@ public class CheckBox6 extends Question {
 
 
         System.out.println("\n" + this.getQuestion() + "1: " + choice1 + "\n2: " + choice2 + "\n3: " + choice3 + "\n4: " + choice4 + "\n5: " + choice5 + "\n6: " + choice6 + "\n\nPlease select 3 answers, enter 0 if there are no more correct answers.\n(Select and type 1 answer, hit enter, repeat.)\n");
+
     }
 
     public double returnScore(Integer num) {
@@ -135,6 +142,10 @@ public class CheckBox6 extends Question {
             return 1;
         }
         return .33 * num;
+    }
+
+    public static CheckBox6 removeCBitem(CheckBox6 remove) {
+        return remove;
     }
 
 

@@ -11,10 +11,10 @@ public class QuizRunner {
 
         while (1==1) {
 
-            System.out.println("\nPlease select what you would like to do.\n1 - Generate and take premade test.\n2 - Create your own test questions.\n3 - Remove question from your test.\n4 - Take the test you made.\n5 - Finish"); //remove questions, take user test
+            System.out.println("\nPlease select what you would like to do.\n1 - Generate and take premade test.\n2 - Create your own test questions.\n3 - Remove question from your test.\n4 - Take the test you made.\n5 - Finish\n\n");
 
             while (!input.hasNextInt()) {
-                System.out.println("Please enter a number 1-3");
+                System.out.println("\nPlease enter a number 1-5\n");
                 input.nextLine();
             }
             String user = input.nextLine();
@@ -39,7 +39,6 @@ public class QuizRunner {
             }
 
             if (Objects.equals(user, "3")) {
-                Quiz.generateFalseUserTest();
                 Quiz.removeTestQuestions();
             }
 
@@ -52,6 +51,10 @@ public class QuizRunner {
             if (Objects.equals(user, "5")) {
                 System.out.println("........\n.....\n...\n..\n.\nGoodbye");
                 break;
+            }
+
+            if (Objects.equals(user, "404")) {
+                System.out.println("Logic not found");
             }
 
 

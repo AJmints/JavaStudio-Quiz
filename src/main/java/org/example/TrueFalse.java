@@ -10,6 +10,10 @@ public class TrueFalse extends Question{
     private HashMap<String, Integer> answer2;
     public int id = bump();
 
+    public TrueFalse() {
+        super("", 0);
+    }
+
     public TrueFalse(String aQuestion, double aPointValue, HashMap<String, Integer> answer1, HashMap<String, Integer> answer2) {
         super(aQuestion, aPointValue);
         this.answer1 = answer1;

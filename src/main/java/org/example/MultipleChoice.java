@@ -13,6 +13,10 @@ public class MultipleChoice extends Question{
 
     public int id = bump();
 
+    public MultipleChoice() {
+        super("", 0);
+    }
+
     public MultipleChoice(String aQuestion, double aPointValue, HashMap<String, Integer> answer1, HashMap<String, Integer> answer2, HashMap<String, Integer> answer3, HashMap<String, Integer> answer4) {
         super(aQuestion, aPointValue);
         this.answer1 = answer1;

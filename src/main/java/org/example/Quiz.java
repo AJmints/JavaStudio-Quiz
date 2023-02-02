@@ -143,6 +143,10 @@ public class Quiz {
             System.out.println("\nWhen creating your answers, they will appear on the test in same order you put them in. It's on my todo list to make the questions appear in random order.\n\nPlease enter a test question:\n");
             cbQuestion = input.nextLine();
 
+            /** CheckBox Question set up **/
+            /** CheckBox Question set up **/
+            /** CheckBox Question set up **/
+
             int j = 1;
             for (int i = 0; i < 6; i++) {
 
@@ -320,6 +324,8 @@ public class Quiz {
         }
 
         /** True or False Question set up **/
+        /** True or False Question set up **/
+        /** True or False Question set up **/
 
         if (Objects.equals(answer, "2")) {
 
@@ -432,6 +438,8 @@ public class Quiz {
             }
         }
 
+        /** Multiple Choice set up **/
+        /** Multiple Choice set up **/
         /** Multiple Choice set up **/
 
         if (Objects.equals(answer, "3")) {
@@ -595,6 +603,7 @@ public class Quiz {
     public static void resetQuiz() {
         score = 0;
     }
+
     public static void getTestQuestion() {
 
         int checkBoxCount = 0;
@@ -766,9 +775,13 @@ public class Quiz {
     }
 
     public static void removeTestQuestions() {
-        Iterator<Question> it = userMadeTest.iterator();
+
+        if (userMadeTest.size() == 0) {
+            System.out.println(".\n.\n.\nThe test is empty, please create test questions to remove.\n.\n.\nSending you back to the main menu.\n.\n.");
+            return;
+        }
         Scanner input = new Scanner(System.in);
-        Boolean cont = true;
+        boolean cont = true;
 
         do {
 
@@ -810,13 +823,18 @@ public class Quiz {
                 }
             }
             int remove = choice;
+
             while (!input.hasNextInt()) {
                 System.out.println("Please enter 1 or 2.");
                 input.nextLine();
             }
             choice = input.nextInt();
 
+
             /** need to find way to remove item from array, current code below doesn't work. **/
+            /** need to find way to remove item from array, current code below doesn't work. **/
+            /** need to find way to remove item from array, current code below doesn't work. **/
+
 
             if (choice == 1) {
                 for (Question item : userMadeTest) {
@@ -824,22 +842,23 @@ public class Quiz {
                         if (((CheckBox6) item).id == remove) {
                             userMadeTest.remove(item);
                             cont = false;
+                            return;
                         }
                     } else if (item instanceof MultipleChoice) {
                         if (((MultipleChoice) item).id == remove) {
                             userMadeTest.remove(item);
                             cont = false;
+                            return;
                         }
                     } else if (item instanceof TrueFalse) {
                         if (((TrueFalse) item).id == remove) {
                             userMadeTest.remove(item);
                             cont = false;
+                            return;
                         }
-
                     }
                 }
             }
-
 
             System.out.println("Would you like to remove a different item?\n1 - yes\n2 - no");
             while (!input.hasNextInt()) {
@@ -855,8 +874,10 @@ public class Quiz {
 
     }
 
-    /** temp test filler **/
 
+    /** temp test filler to run code to remove items from an array**/
+    /** temp test filler to run code to remove items from an array**/
+    /** temp test filler to run code to remove items from an array**/
     public static void generateFalseUserTest() {
 
         MultipleChoice test = new MultipleChoice("What kind of organism is a tardigrade?", 1);
