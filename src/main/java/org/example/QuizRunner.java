@@ -46,6 +46,7 @@ public class QuizRunner {
             if (Objects.equals(user, "4")) {
                 Quiz.getUserTestQuestions();
                 System.out.println("Your score was " + Quiz.getScore() + " out of " + Quiz.userMadeTest.size() + " possible points.");
+                Quiz.resetQuiz();
             }
 
             if (Objects.equals(user, "5")) {

@@ -179,12 +179,11 @@ public class Quiz {
                 if (i == 0) {
                     if (Objects.equals(bStr1, "1")) {
                         answer1.put(aStr1, lightSwitch);
-                        System.out.println(answer1.entrySet());
+                        System.out.println("\n");
                         j++;
                     } else if (Objects.equals(bStr1, "2")) {
                         answer1.put("void", 0);
-                        System.out.println(answer1.entrySet());
-                        System.out.println("Void entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
+                        System.out.println("\nVoid entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
                         bStr1 = input.nextLine();
                         if (Objects.equals(bStr1, "1")) {
                             break;
@@ -192,20 +191,18 @@ public class Quiz {
                         j++;
                     } else {
                         answer1.put("void", 0);
-                        System.out.println(answer1.entrySet());
-                        System.out.println("Void entry added\n");
+                        System.out.println("\nVoid entry added\n");
                         j++;
                     }
                 }
                 if (i == 1) {
                     if (Objects.equals(bStr1, "1")) {
                         answer2.put(aStr1, lightSwitch);
-                        System.out.println(answer2.entrySet());
+                        System.out.println("\n");
                         j++;
                     } else if (Objects.equals(bStr1, "2")) {
                         answer2.put("void", 0);
-                        System.out.println(answer2.entrySet());
-                        System.out.println("Void entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
+                        System.out.println("\nVoid entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
                         bStr1 = input.nextLine();
                         if (Objects.equals(bStr1, "1")) {
                             break;
@@ -213,20 +210,18 @@ public class Quiz {
                         j++;
                     } else {
                         answer2.put("void", 0);
-                        System.out.println(answer2.entrySet());
-                        System.out.println("Void entry added\n");
+                        System.out.println("\nVoid entry added\n");
                         j++;
                     }
                 }
             if (i == 2) {
                 if (Objects.equals(bStr1, "1")) {
                     answer3.put(aStr1, lightSwitch);
-                    System.out.println(answer3.entrySet());
+                    System.out.println("\n");
                     j++;
                 } else if (Objects.equals(bStr1, "2")) {
                     answer3.put("void", 0);
-                    System.out.println(answer3.entrySet());
-                    System.out.println("Void entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
+                    System.out.println("\nVoid entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
                     bStr1 = input.nextLine();
                     if (Objects.equals(bStr1, "1")) {
                         break;
@@ -234,20 +229,18 @@ public class Quiz {
                     j++;
                 } else {
                     answer3.put("void", 0);
-                    System.out.println(answer3.entrySet());
-                    System.out.println("Void entry added\n");
+                    System.out.println("\nVoid entry added\n");
                     j++;
                 }
             }
                 if (i == 3) {
                     if (Objects.equals(bStr1, "1")) {
                         answer4.put(aStr1, lightSwitch);
-                        System.out.println(answer4.entrySet());
+                        System.out.println("\n");
                         j++;
                     } else if (Objects.equals(bStr1, "2")) {
                         answer4.put("void", 0);
-                        System.out.println(answer4.entrySet());
-                        System.out.println("Void entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
+                        System.out.println("\nVoid entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
                         bStr1 = input.nextLine();
                         if (Objects.equals(bStr1, "1")) {
                             break;
@@ -255,20 +248,18 @@ public class Quiz {
                         j++;
                     } else {
                         answer4.put("void", 0);
-                        System.out.println(answer4.entrySet());
-                        System.out.println("Void entry added\n");
+                        System.out.println("\nVoid entry added\n");
                         j++;
                     }
                 }
                 if (i == 4) {
                     if (Objects.equals(bStr1, "1")) {
                         answer5.put(aStr1, lightSwitch);
-                        System.out.println(answer5.entrySet());
+                        System.out.println("\n");
                         j++;
                     } else if (Objects.equals(bStr1, "2")) {
                         answer5.put("void", 0);
-                        System.out.println(answer5.entrySet());
-                        System.out.println("Void entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
+                        System.out.println("\nVoid entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
                         bStr1 = input.nextLine();
                         if (Objects.equals(bStr1, "1")) {
                             break;
@@ -276,20 +267,18 @@ public class Quiz {
                         j++;
                     } else {
                         answer5.put("void", 0);
-                        System.out.println(answer5.entrySet());
-                        System.out.println("Void entry added\n");
+                        System.out.println("\nVoid entry added\n");
                         j++;
                     }
                 }
                 if (i == 5) {
                     if (Objects.equals(bStr1, "1")) {
                         answer6.put(aStr1, lightSwitch);
-                        System.out.println(answer6.entrySet());
+                        System.out.println("\n");
                         j++;
                     } else if (Objects.equals(bStr1, "2")) {
                         answer6.put("void", 0);
-                        System.out.println(answer6.entrySet());
-                        System.out.println("Void entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
+                        System.out.println("\nVoid entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
                         bStr1 = input.nextLine();
                         if (Objects.equals(bStr1, "1")) {
                             break;
@@ -297,8 +286,7 @@ public class Quiz {
                         j++;
                     } else {
                         answer6.put("void", 0);
-                        System.out.println(answer6.entrySet());
-                        System.out.println("Void entry added\n");
+                        System.out.println("\nVoid entry added\n");
                         j++;
                     }
                 }
@@ -381,12 +369,11 @@ public class Quiz {
                 if (i == 0) {
                     if (Objects.equals(bStr1, "1")) {
                         answer1.put(aStr1, lightSwitch);
-                        System.out.println(answer1.entrySet());
+                        System.out.println("\n");
                         j++;
                     } else if (Objects.equals(bStr1, "2")) {
                         answer1.put("void", 0);
-                        System.out.println(answer1.entrySet());
-                        System.out.println("Void entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
+                        System.out.println("\nVoid entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
                         bStr1 = input.nextLine();
                         if (Objects.equals(bStr1, "1")) {
                             break;
@@ -394,20 +381,18 @@ public class Quiz {
                         j++;
                     } else {
                         answer1.put("void", 0);
-                        System.out.println(answer1.entrySet());
-                        System.out.println("Void entry added\n");
+                        System.out.println("\nVoid entry added\n");
                         j++;
                     }
                 }
                 if (i == 1) {
                     if (Objects.equals(bStr1, "1")) {
                         answer2.put(aStr1, lightSwitch);
-                        System.out.println(answer2.entrySet());
+                        System.out.println("\n");
                         j++;
                     } else if (Objects.equals(bStr1, "2")) {
                         answer2.put("void", 0);
-                        System.out.println(answer2.entrySet());
-                        System.out.println("Void entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
+                        System.out.println("\nVoid entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
                         bStr1 = input.nextLine();
                         if (Objects.equals(bStr1, "1")) {
                             break;
@@ -415,8 +400,7 @@ public class Quiz {
                         j++;
                     } else {
                         answer2.put("void", 0);
-                        System.out.println(answer2.entrySet());
-                        System.out.println("Void entry added\n");
+                        System.out.println("\nVoid entry added\n");
                         j++;
                     }
                 }
@@ -500,12 +484,11 @@ public class Quiz {
                 if (i == 0) {
                     if (Objects.equals(bStr1, "1")) {
                         answer1.put(aStr1, lightSwitch);
-                        System.out.println(answer1.entrySet());
+                        System.out.println("\n");
                         j++;
                     } else if (Objects.equals(bStr1, "2")) {
                         answer1.put("void", 0);
-                        System.out.println(answer1.entrySet());
-                        System.out.println("Void entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
+                        System.out.println("\nVoid entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
                         bStr1 = input.nextLine();
                         if (Objects.equals(bStr1, "1")) {
                             break;
@@ -513,20 +496,19 @@ public class Quiz {
                         j++;
                     } else {
                         answer1.put("void", 0);
-                        System.out.println(answer1.entrySet());
-                        System.out.println("Void entry added\n");
+                        System.out.println("\nVoid entry added\n");
                         j++;
                     }
                 }
                 if (i == 1) {
                     if (Objects.equals(bStr1, "1")) {
                         answer2.put(aStr1, lightSwitch);
-                        System.out.println(answer2.entrySet());
+                        System.out.println("\n");
                         j++;
                     } else if (Objects.equals(bStr1, "2")) {
                         answer2.put("void", 0);
                         System.out.println(answer2.entrySet());
-                        System.out.println("Void entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
+                        System.out.println("\nVoid entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
                         bStr1 = input.nextLine();
                         if (Objects.equals(bStr1, "1")) {
                             break;
@@ -535,19 +517,18 @@ public class Quiz {
                     } else {
                         answer2.put("void", 0);
                         System.out.println(answer2.entrySet());
-                        System.out.println("Void entry added\n");
+                        System.out.println("\nVoid entry added\n");
                         j++;
                     }
                 }
                 if (i == 2) {
                     if (Objects.equals(bStr1, "1")) {
                         answer3.put(aStr1, lightSwitch);
-                        System.out.println(answer3.entrySet());
+                        System.out.println("\n");
                         j++;
                     } else if (Objects.equals(bStr1, "2")) {
                         answer3.put("void", 0);
-                        System.out.println(answer3.entrySet());
-                        System.out.println("Void entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
+                        System.out.println("\nVoid entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
                         bStr1 = input.nextLine();
                         if (Objects.equals(bStr1, "1")) {
                             break;
@@ -555,20 +536,18 @@ public class Quiz {
                         j++;
                     } else {
                         answer3.put("void", 0);
-                        System.out.println(answer3.entrySet());
-                        System.out.println("Void entry added\n");
+                        System.out.println("\nVoid entry added\n");
                         j++;
                     }
                 }
                 if (i == 3) {
                     if (Objects.equals(bStr1, "1")) {
                         answer4.put(aStr1, lightSwitch);
-                        System.out.println(answer4.entrySet());
+                        System.out.println("\n");
                         j++;
                     } else if (Objects.equals(bStr1, "2")) {
                         answer4.put("void", 0);
-                        System.out.println(answer4.entrySet());
-                        System.out.println("Void entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
+                        System.out.println("\nVoid entry added\nWould you like to terminate your progress and start over? 1 for yes, 2 for no.\n");
                         bStr1 = input.nextLine();
                         if (Objects.equals(bStr1, "1")) {
                             break;
@@ -576,8 +555,7 @@ public class Quiz {
                         j++;
                     } else {
                         answer4.put("void", 0);
-                        System.out.println(answer4.entrySet());
-                        System.out.println("Void entry added\n");
+                        System.out.println("\nVoid entry added\n");
                         j++;
                     }
                 }
