@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class MultipleChoice extends Question{
 
-    private HashMap<String, Integer> answer1; // String "answer", Integer (1 = true or 0 = false)
+    private HashMap<String, Integer> answer1;
     private HashMap<String, Integer> answer2;
     private HashMap<String, Integer> answer3;
     private HashMap<String, Integer> answer4;

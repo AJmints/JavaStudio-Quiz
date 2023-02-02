@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class TrueFalse extends Question{
 
-    private HashMap<String, Integer> answer1; // String "answer", Integer (1 = true or 0 = false)
+    private HashMap<String, Integer> answer1;
     private HashMap<String, Integer> answer2;
     public int id = bump();
 
@@ -57,7 +57,7 @@ public class TrueFalse extends Question{
             }
         }
         return false;
-    };
+    }
 
     public void getQuestionKeysTrueFalse() {
         String choice1 = "";

@@ -6,13 +6,24 @@ import java.util.*;
 public class Quiz {
 
     /** A lot of refactoring needs to be done. **/
+
+    /** The heavy lifting of this program lives here in Quiz. Here we establish our ArrayList and keep score of the test each time it is taken.  **/
+    /** The heavy lifting of this program lives here in Quiz. Here we establish our ArrayList and keep score of the test each time it is taken.  **/
+    /** The heavy lifting of this program lives here in Quiz. Here we establish our ArrayList and keep score of the test each time it is taken.  **/
+
     public static ArrayList<Question> theTest = new ArrayList<>();
     public static ArrayList<Question> userMadeTest = new ArrayList<>();
     public static Scanner input = new Scanner(System.in);
     private static double score;
 
 
+    /** This method generates a premade test **/
+    /** This method generates a premade test **/
+    /** This method generates a premade test **/
+
     public static void generateTest() {
+
+        /** Multiple Choice test questions **/
 
         MultipleChoice test = new MultipleChoice("What kind of organism is a tardigrade?", 1);
         MultipleChoice test2 = new MultipleChoice("What is 4 + 4?", 1);
@@ -43,8 +54,8 @@ public class Quiz {
         test2.setAnswer3(testHash7);
         test2.setAnswer4(testHash8);
 
-        Quiz.theTest.add(test);
-        Quiz.theTest.add(test2);
+
+        /** True/False test questions **/
 
         TrueFalse test3 = new TrueFalse("Is 5 greater than 6?", 1);
         TrueFalse test4 = new TrueFalse("Our planet is located in the Milky Way Galaxy.", 1);
@@ -63,11 +74,11 @@ public class Quiz {
         test4.setAnswer1(testHash11);
         test4.setAnswer2(testHash12);
 
-        Quiz.theTest.add(test3);
-        Quiz.theTest.add(test4);
 
-        CheckBox6 test5 = new CheckBox6("Which of these are true about the Blue Whale?", 1);
-        CheckBox6 test6 = new CheckBox6("Which of these are not part of a car?", 1);
+        /** Check Box test questions **/
+
+        CheckBox6 test5 = new CheckBox6("Which of the following are true about the Blue Whale?", 1);
+        CheckBox6 test6 = new CheckBox6("Which of the following are not part of a car?", 1);
 
         HashMap<String, Integer> testHash13 = new HashMap<>();
         HashMap<String, Integer> testHash14 = new HashMap<>();
@@ -81,7 +92,7 @@ public class Quiz {
         testHash15.put("Largest land mammal.", 0);
         testHash16.put("The maximum confirmed length has been recorded at 98ft.", 4);
         testHash17.put("The US uses the Blue Whale as the symbol of freedom.", 0);
-        testHash18.put("It's diet consists almost exclusively of krill", 6);
+        testHash18.put("It's diet consists almost exclusively of krill.", 6);
         test5.setAnswer1(testHash13);
         test5.setAnswer2(testHash14);
         test5.setAnswer3(testHash15);
@@ -109,23 +120,38 @@ public class Quiz {
         test6.setAnswer5(testHash23);
         test6.setAnswer6(testHash24);
 
+        Quiz.theTest.add(test);
+        Quiz.theTest.add(test2);
+        Quiz.theTest.add(test3);
+        Quiz.theTest.add(test4);
         Quiz.theTest.add(test5);
         Quiz.theTest.add(test6);
 
     }
 
+
+    /** This method is the logic for creating test questions and storing them to use later. **/
+    /** This method is the logic for creating test questions and storing them to use later. **/
+    /** This method is the logic for creating test questions and storing them to use later. **/
     public static void writeUserTest() {
         Scanner input = new Scanner(System.in);
 
-        //write new test in future with variable answers and questions that can be displayed shuffled/randomized
-        System.out.println("\nWhat test would you like like to write?\n1 - A check box style test with a total of 6 answers provided. Format is set to 3 are correct and 3 are wrong.\n2 - A True or False test.\n3 - A multiple choice style test with 4 possible answers. Only 1 can be right.");
+        /** In the future, I want to write test questions with answers that can be shuffled/randomized every time the test is run. I think using a HashMap<String, Boolean> would give me the results I am looking for. **/
+        /** I could possibly save a lot of lines of code if I use setters to populate the HashMaps for each question class. **/
 
+        System.out.println("\nWhat test would you like like to write?\n1 - A check box style test with a total of 6 answers provided. Format is set to 3 are correct and 3 are wrong.\n2 - A True or False test.\n3 - A multiple choice style test with 4 possible answers. Only 1 can be right.");
 
         while (!input.hasNextInt()) {
             System.out.println("Please enter a number between 1-3");
             input.nextLine();
         }
         String answer = input.nextLine();
+
+
+        /** CheckBox Question set up **/
+        /** CheckBox Question set up **/
+        /** CheckBox Question set up **/
+
         if (Objects.equals(answer, "1")) {
 
             String cbQuestion = "";
@@ -137,22 +163,16 @@ public class Quiz {
             HashMap<String, Integer> answer5 = new HashMap<>();
             HashMap<String, Integer> answer6 = new HashMap<>();
             String aStr1;
-            boolean zBool1 = false;
             String bStr1;
+            boolean zBool1 = false;
 
-            System.out.println("\nWhen creating your answers, they will appear on the test in same order you put them in. It's on my todo list to make the questions appear in random order.\n\nPlease enter a test question:\n");
+            System.out.println("\n***IMPORTANT***\n\nWhen creating your answers, they will appear on the test in same order you put them in.\n\nPlease enter a test question:\n");
             cbQuestion = input.nextLine();
-
-            /** CheckBox Question set up **/
-            /** CheckBox Question set up **/
-            /** CheckBox Question set up **/
 
             int j = 1;
             for (int i = 0; i < 6; i++) {
 
-                System.out.println("Your question is:\n" + cbQuestion.toUpperCase());
-
-                System.out.println("\nPlease enter an answer to the question.\n");
+                System.out.println("Your question is:\n" + cbQuestion.toUpperCase() + "\nPlease enter an answer to the question you entered.\n");
                 aStr1 = input.nextLine();
 
                 System.out.println("\nIs this answer true or false?\n1 - true\n2 - false\n");
@@ -774,6 +794,24 @@ public class Quiz {
         }
     }
 
+    public static void viewUserTestQuestions() {
+
+            for (Question obj : userMadeTest) {
+                if (obj instanceof MultipleChoice) {
+                        System.out.println("\nId: " + ((MultipleChoice) obj).id);
+                        ((MultipleChoice) obj).getQuestionKeysMultipleChoice();
+                }
+                if (obj instanceof TrueFalse) {
+                        System.out.println("\nId: " + ((TrueFalse) obj).id);
+                        ((TrueFalse) obj).getQuestionKeysTrueFalse();
+                }
+                if (obj instanceof CheckBox6) {
+                        System.out.println("\nId: " + ((CheckBox6) obj).id);
+                        ((CheckBox6) obj).getQuestionKeysCheckBox6ForRemoveQuestion();
+                    }
+                }
+    }
+
     public static void removeTestQuestions() {
 
         if (userMadeTest.size() == 0) {
@@ -789,7 +827,7 @@ public class Quiz {
 
                 if (item instanceof CheckBox6) {
                     System.out.println("Question ID: " + ((CheckBox6) item).id);
-                    ((CheckBox6) item).getQuestionKeysCheckBox6();
+                    ((CheckBox6) item).getQuestionKeysCheckBox6ForRemoveQuestion();
                 } else if (item instanceof MultipleChoice) {
                     System.out.println("Question ID: " + ((MultipleChoice) item).id);
                     ((MultipleChoice) item).getQuestionKeysMultipleChoice();

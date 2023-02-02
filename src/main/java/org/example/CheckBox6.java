@@ -6,7 +6,6 @@ import java.util.Map;
 
 public class CheckBox6 extends Question {
 
-    //Thinking about making a new CheckBox4 Class that offers 4 answer. Need to figure out how to shuffle answer options.
     private HashMap<String, Integer> answer1;
     private HashMap<String, Integer> answer2;
     private HashMap<String, Integer> answer3;
@@ -134,6 +133,38 @@ public class CheckBox6 extends Question {
 
     }
 
+    public void getQuestionKeysCheckBox6ForRemoveQuestion() {
+        String choice1 = "";
+        String choice2 = "";
+        String choice3 = "";
+        String choice4 = "";
+        String choice5 = "";
+        String choice6 = "";
+
+        for (String key : getAnswer1().keySet()) {
+            choice1 = key;
+        }
+        for (String key : getAnswer2().keySet()) {
+            choice2 = key;
+        }
+        for (String key : getAnswer3().keySet()) {
+            choice3 = key;
+        }
+        for (String key : getAnswer4().keySet()) {
+            choice4 = key;
+        }
+        for (String key : getAnswer5().keySet()) {
+            choice5 = key;
+        }
+        for (String key : getAnswer6().keySet()) {
+            choice6 = key;
+        }
+
+
+        System.out.println("\n" + this.getQuestion() + "1: " + choice1 + "\n2: " + choice2 + "\n3: " + choice3 + "\n4: " + choice4 + "\n5: " + choice5 + "\n6: " + choice6 + "\n");
+
+    }
+
     public double returnScore(Integer num) {
         if (num > 3) {
             return .22 * num;
@@ -143,10 +174,5 @@ public class CheckBox6 extends Question {
         }
         return .33 * num;
     }
-
-    public static CheckBox6 removeCBitem(CheckBox6 remove) {
-        return remove;
-    }
-
 
 }
