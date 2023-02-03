@@ -102,6 +102,6 @@ public class MultipleChoice extends Question{
             }
         }
         return false;
-    };
+    }
 
 }

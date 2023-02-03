@@ -70,6 +70,7 @@ public class QuizRunner {
                 Quiz.getUserTestQuestions();
                 System.out.println("Your score was " + Quiz.getScore() + " out of " + Quiz.userMadeTest.size() + " possible points.");
                 Quiz.resetQuiz();
+
             }
 
             if (Objects.equals(user, "5")) {
@@ -106,10 +107,8 @@ public class QuizRunner {
 
             if (Objects.equals(user, "404")) {
                 System.out.println("Logic not found");
-                ExperimentCode.playground1();
+                ExperimentCode.playground2();
             }
-
-
 
         }
     }

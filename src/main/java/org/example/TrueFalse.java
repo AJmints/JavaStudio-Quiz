@@ -72,4 +72,9 @@ public class TrueFalse extends Question{
 
         System.out.println("\n" + this.getQuestion() + "1: " + choice1 + "\n2: " + choice2 + "\n");
     }
+
+//    public static void resetTFid() {
+//        id = 0;
+//    }
+
 }

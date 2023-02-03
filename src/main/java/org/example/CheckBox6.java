@@ -175,4 +175,8 @@ public class CheckBox6 extends Question {
         return .33 * num;
     }
 
+//    public static void resetCBid() {
+//        id = 0;
+//    }
+
 }

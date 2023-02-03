@@ -624,6 +624,10 @@ public class Quiz {
         score = 0;
     }
 
+    /** This method runs the premade test **/
+    /** This method runs the premade test **/
+    /** This method runs the premade test **/
+
     public static void getTestQuestion() {
 
         int checkBoxCount = 0;
@@ -708,6 +712,10 @@ public class Quiz {
         }
     }
 
+    /** This method runs the test for the user to take a test they create **/
+    /** This method runs the test for the user to take a test they create **/
+    /** This method runs the test for the user to take a test they create **/
+
     public static void getUserTestQuestions() {
 
         /** create a way to tell the lowest ID number from a question and make a range from lowest to highest ID number from user questions so we can randomize these answers forever **/
@@ -715,10 +723,11 @@ public class Quiz {
         int checkBoxCount = 0;
         ArrayList<Integer> checkBoxAnswers = new ArrayList<>();
         ArrayList<Integer> duplicateSearch = new ArrayList<>();
+
         Random r = new Random();
         Set<Integer>set = new LinkedHashSet<>();
         while (set.size() < userMadeTest.size()) {
-            set.add(r.nextInt(userMadeTest.size()) + 1);
+            set.add(r.nextInt(userMadeTest.size()) + 1); // r.nextInt( << Here is where we add the
         }
         Integer[] arr = set.toArray(new Integer[0]);
 
@@ -794,6 +803,10 @@ public class Quiz {
         }
     }
 
+    /** This method loops through the arraylist to display saved questions **/
+    /** This method loops through the arraylist to display saved questions **/
+    /** This method loops through the arraylist to display saved questions **/
+
     public static void viewUserTestQuestions() {
 
         if (userMadeTest.size() == 0) {
@@ -816,6 +829,11 @@ public class Quiz {
                     }
                 }
     }
+
+
+    /** This is the method used to remove test questions from your arraylist **/
+    /** This is the method used to remove test questions from your arraylist **/
+    /** This is the method used to remove test questions from your arraylist **/
 
     public static void removeTestQuestions() {
 
@@ -915,9 +933,9 @@ public class Quiz {
     }
 
 
-    /** temp test filler to run code to remove items from an array**/
-    /** temp test filler to run code to remove items from an array**/
-    /** temp test filler to run code to remove items from an array**/
+    /** test filler to run code to remove items from an array or try view test questions **/
+    /** test filler to run code to remove items from an array or try view test questions **/
+    /** test filler to run code to remove items from an array or try view test questions **/
     public static void generateFalseUserTest() {
 
         MultipleChoice test = new MultipleChoice("What kind of organism is a tardigrade?", 1);
